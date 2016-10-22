@@ -50,7 +50,7 @@
 		http://www.springframework.org/schema/security
 		http://www.springframework.org/schema/security/spring-security.xsd">
 
-    <http auto-config="true">
+    <http auto-config="true" use-expressions="true">
         <intercept-url pattern="index.html" access="permitAll"/>
         <intercept-url pattern="login.html" access="permitAll" />
         <intercept-url pattern="/pages/*" access="hasRole('ROLE_USER')" />
@@ -68,11 +68,12 @@
                 logout-url="/logout"
                 logout-success-url="/login.html"
                 invalidate-session="true" />
-                
+
         <!-- enable csrf protection -->
         <csrf disabled="true" />
     </http>
 
+    <!--不使用数据库-->
     <authentication-manager>
         <authentication-provider>
             <user-service>
@@ -80,7 +81,6 @@
             </user-service>
         </authentication-provider>
     </authentication-manager>
-
 </beans:beans>
 ```
 
@@ -125,7 +125,7 @@
 >  这里只修改了数据源，而且没有对password加密。dataSource已经在spring配置文件中声明。
 
 ``` xml
-   <http auto-config="true">
+   <http auto-config="true" use-expressions="true">
         <intercept-url pattern="index.html" access="permitAll"/>
         <intercept-url pattern="login.html" access="permitAll" />
         <intercept-url pattern="/pages/*" access="hasRole('ROLE_USER')" />
@@ -143,7 +143,7 @@
                 logout-url="/logout"
                 logout-success-url="/login.html"
                 invalidate-session="true" />
-                
+
         <!-- enable csrf protection -->
         <csrf disabled="true" />
     </http>
