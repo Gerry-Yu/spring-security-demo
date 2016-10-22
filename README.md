@@ -103,7 +103,7 @@
 > * SecurityContextHolder：使用ThreadLocal保存SecurityContext。
 > * AuthenticationManager：验证Authentication的接口
 > * ProviderManager：AuthenticationManager接口默认实现。将注册DaoAuthenticationProvider，委托AuthenticationProvider列表来验证Authentication。验证方式一般为根据username加载UserDetails，对于UserDetails密码与输入是否一致。
-> * AuthenticationProvider：默认创建DaoAuthenticationProvider，内部使用UserDetailsService加载UserDetails。需要使用自己的认证方式时，可以使用自己实现的AuthenticationProvider；如果需要改变认证的用户信息来源，可以实现自己的UserDetailsService（如下都使用默认空间为security）。
+> * AuthenticationProvider：默认创建DaoAuthenticationProvider，内部使用UserDetailsService加载UserDetails。需要使用自己的认证方式时，可以使用自己实现的AuthenticationProvider；如果需要改变认证的用户信息来源，可以实现自己的UserDetailsService（如下都使用默认命名空间为security）。
 
 ``` xml
 <authentication-manager>          
