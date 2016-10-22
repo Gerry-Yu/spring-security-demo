@@ -140,7 +140,7 @@
 
         <!-- logout-success-url:成功注销后跳转到的页面; -->
         <logout
-                logout-url="/j_spring_security_logout"
+                logout-url="/logout"
                 logout-success-url="/login.html"
                 invalidate-session="true" />
                 
