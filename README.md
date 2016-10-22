@@ -59,7 +59,7 @@
                 login-page="/login.html"
                 default-target-url="/pages/welcome.html"
                 authentication-failure-url="/login.html?error"
-                login-processing-url="/j_spring_security_check"
+                login-processing-url="/login"
                 username-parameter="username"
                 password-parameter="password" />
 
