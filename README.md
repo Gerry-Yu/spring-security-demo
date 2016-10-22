@@ -65,7 +65,7 @@
 
         <!-- logout-success-url:成功注销后跳转到的页面; -->
         <logout
-                logout-url="/login"
+                logout-url="/logout"
                 logout-success-url="/login.html"
                 invalidate-session="true" />
                 
